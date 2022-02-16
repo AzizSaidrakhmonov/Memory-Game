@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="memory-game__modal">
+        <div class="memory-game__modal-wrapper">
+            <div class="winning-table">
+                <div class="winning-table__header">
+                    <img src="./congrats.png" alt="Congrats">
+                </div>
+                <div class="winning-table__body">
+                    <p>Congratulations, you combined all the cards!!!</p>
+                    
+                    <button id="newGame" style="cursor: pointer">New Game</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+   
+
+    <div class="calculate">
+        <div class="timer-container">
+            <p class="game-time"> Time of the game : </p>
+            <p class="timer"></p>
+        </div>
+
+        <div class="attempt">Number of attempts: 
+            <p class="attempt-counter">0</p>
+        </div>
+    </div>
+
+    
+    <div class="memory-game">
+        <div class="memory-card card-1" data-image="js">
+            <img class="front-face img1" src="./img-1.png" alt="js" >
+            <img class="back-face" src="./backface.jpg" alt="Backface">
+        </div>
+
+        <div class="memory-card card-2" data-image="sass">
+            <img class="front-face img2" src="./img-3.png" alt="sass">
+            <img class="back-face" src="./backface.jpg" alt="Backface">
+        </div>
+
+        <div class="memory-card card-3" data-image="sass">
+            <img class="front-face img3" src="./img-3.png" alt="sass" >
+            <img class="back-face" src="./backface.jpg" alt="Backface">
+        </div>
+
+        <div class="memory-card card-4" data-image="angular">
+            <img class="front-face img4" src="./img-5.png" alt="angular" >
+            <img class="back-face" src="./backface.jpg" alt="Backface">
+        </div>
+
+        <div class="memory-card card-5" data-image="react">
+            <img class="front-face img5" src="./img-2.png" alt="react" >
+            <img class="back-face" src="./backface.jpg" alt="Backface">
+        </div>
+ 
+        <div class="memory-card card-6" data-image="bootstrap">
+            <img class="front-face img6" src="./img-6.png" alt="bootstrap" >
+            <img class="back-face" src="./backface.jpg" alt="Backface">
+        </div>
+
+        <div class="memory-card card-7" data-image="js">
+            <img class="front-face img7" src="./img-1.png" alt="js" >
+            <img class="back-face" src="./backface.jpg" alt="Backface">
+        </div>
+
+        <div class="memory-card card-8" data-image="react">
+            <img class="front-face" src="./img-2.png" alt="react" >
+            <img class="back-face" src="./backface.jpg" alt="Backface">
+        </div>
+
+        <div class="memory-card card-9" data-image="vue">
+            <img class="front-face" src="./img-4.png" alt="vue" >
+            <img class="back-face" src="./backface.jpg" alt="Backface">
+        </div>
+
+        <div class="memory-card card-10" data-image="vue">
+            <img class="front-face" src="./img-4.png" alt="vue" >
+            <img class="back-face" src="./backface.jpg" alt="Backface">
+        </div>
+
+        <div class="memory-card card-11" data-image="angular">
+            <img class="front-face" src="./img-5.png" alt="angular" >
+            <img class="back-face" src="./backface.jpg" alt="Backface">
+        </div>
+
+        <div class="memory-card card-12" data-image="bootstrap">
+            <img class="front-face" src="./img-6.png" alt="bootstrap" >
+            <img class="back-face" src="./backface.jpg" alt="Backface">
+        </div>
+
+    </div>
+
+  
+
+    <script src="./app.js"></script>
+</body>
+</html>

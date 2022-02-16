@@ -1,0 +1,250 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #000;
+    display: flex
+}
+
+img {
+    width: 100px;
+}
+
+.memory-game {
+    width: 640px;
+    height: 560px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    transform: scale(1);
+    margin-top: 30px;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    perspective: 1000px;
+    /* background: red; */
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.memory-card {
+    width: calc(25% - 30px);
+    height: 25%;
+    position: relative;
+    margin: 5px 15px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+/* .memory-card:hover {
+    transform: rotateZ(5deg);
+} */
+
+.memory-card:active {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.memory-card.rotate {
+    transform: rotateY(180deg);
+}
+
+.front-face ,.back-face {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    background: #1c7ccc;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+
+.calculate {
+    display: flex;
+    flex-direction: column;
+    background: red;
+    /* width: 200px; */
+    padding: 20px;
+}
+
+.attempt, .game-time {
+    color: #fff;
+    font-size: 22px;
+    padding: 10px 0;
+    font-family: sans-serif;
+}
+
+.timer, .attempt-counter {
+    color: #000;
+    font-weight: 900;
+    font-family: sans-serif;
+    font-size: 37px;
+}   
+
+.memory-game__modal-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background: rgba(85, 83, 83, 0.702);
+    opacity: 0;  
+    z-index: -99999;
+    position: fixed;
+    transition: all .5s ;
+}
+
+.memory-game__modal-wrapper.active {
+    opacity: 1;
+    transition: all .5s;
+    z-index: 999999;
+    overflow-y: scroll;
+}
+
+.winning-table {
+    background: red;
+    width: 700px;
+    height: 300px;
+    margin: 150px;
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.winning-table__body p{
+    font-family: sans-serif;
+    font-size: 27px;
+    font-weight: 600;
+    color: #fff;
+    /* margin-top: 10px; */
+    text-align: center;
+}
+
+.winning-table__body button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.winning-table__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (max-width: 769px){
+    .memory-card {
+        height: 22%;
+    }
+
+    .winning-table {
+        height: 330px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+
+    .attempt , .game-time {
+        font-size: 22px;
+    }
+
+    .timer , .attempt-counter {
+        font-size: 27px;
+    }
+
+    .memory-game {
+        height: 620px;
+    }
+
+    .memory-card {
+        width: calc(28% - 10px);
+        margin: 5px 15px;
+        height: 22%;
+    }
+
+    .winning-table__header img {
+        width: 50px;
+    }
+
+    .winning-table__body p {
+        font-size: 16px;
+    }
+
+    .winning-table__body button {
+        font-size: 12px;
+    }
+
+    .winning-table {
+        height: 270px;
+    }
+}
+
+@media only screen and (max-width: 585px){
+    .memory-card{
+        width: calc(33% - 10px);
+        margin: 5px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .memory-card {
+        height: 20%;
+    }
+
+    .memory-game {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+
+    .winning-table__body p {
+        font-size: 22px;
+    }
+
+    .winning-table__header img {
+        width: 60px;
+    }
+
+    .winning-table__body button {
+        font-size: 16px;
+    }
+
+    .winning-table {
+        height: 300px;
+    }
+
+    .memory-card {
+        height: 16%;
+    }
+
+    .attempt , .game-time {
+        font-size: 14px;
+    }
+
+    .timer , .attempt-counter {
+        font-size: 16px;
+    }
+
+
+}
+
+@media only screen and (max-width: 362px){
+    .memory-card {
+        height: 13%;
+    }
+}
